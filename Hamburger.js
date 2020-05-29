@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
     Animated,
-    TouchableWithoutFeedback,
+    TouchableOpacity,
     Text,
     View
 } from 'react-native';
@@ -255,7 +255,7 @@ export default class Hamburger extends Component {
         this.width = this.width || new Animated.Value(25);
 
         return (
-            <TouchableWithoutFeedback
+            <TouchableOpacity
                 onPress={()=> {this.props.onPress ? this.props.onPress() : undefined}}>
                 <Animated.View style={{
                     width: 35,
@@ -308,7 +308,7 @@ export default class Hamburger extends Component {
                         ]
                     }} />
                 </Animated.View>
-            </TouchableWithoutFeedback>
+            </TouchableOpacity>
         );
     }
 }
